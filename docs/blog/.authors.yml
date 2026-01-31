@@ -1,0 +1,6 @@
+# .authors.yml
+authors:
+  '0x68756E61':
+    name: '0x68756E61'         # 화면에 표시될 이름
+    description: Blog Owner  # 작성자 소개 (프로필)
+    avatar: https://github.com/0x68756E61.png # (선택사항) 프로필 사진 URL

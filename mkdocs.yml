@@ -1,0 +1,43 @@
+site_name: 0x68756E61's Blog
+
+nav:
+  - Home: index.md            # 대문 (자기소개)
+  - Blog: blog/index.md       # 블로그 목록 페이지
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - content.code.copy       # 코드 복사 버튼
+    - content.tabs.link       # 탭 링크
+    - navigation.expand       # 메뉴 펼치기
+  palette:
+    scheme: default           # 다크모드 설정 가능
+
+markdown_extensions:
+  - admonition                # 박스 강조 기능 (!!! note)
+  - pymdownx.details          # 접기/펼치기 (??? info)
+  - pymdownx.superfences:     # 탭 안에 코드 블록 넣기, Mermaid 등
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:          # 탭 기능 (=== "Tab")
+      alternate_style: true 
+  - pymdownx.highlight:       # 코드 하이라이팅
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:        # 체크박스 ([x])
+      custom_checkbox: true
+  - pymdownx.emoji:           # 이모지 (:smile:)
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.mark             # 형광펜 (==text==)
+  - pymdownx.keys             # 키보드 키 (<kbd>)
+  - footnotes                 # 각주
+
+plugins:
+  - search
+  - blog:                     # 블로그 기능 활성화
+      post_dir: blog/posts

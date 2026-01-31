@@ -1,0 +1,24 @@
+name: Publish to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+      
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          
+      # 필요 플러그인
+      - run: pip install mkdocs-material mkdocs-simple-blog
+      
+      # 내부적으로 'site/' 폴더를 만들어 'gh-pages' 브랜치에 강제 푸시
+      - run: mkdocs gh-deploy --force
