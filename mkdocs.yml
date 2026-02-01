@@ -15,6 +15,7 @@ theme:
     scheme: default           # 다크모드 설정 가능
 
 markdown_extensions:
+  - attr_list #
   - admonition                # 박스 강조 기능 (!!! note)
   - pymdownx.details          # 접기/펼치기 (??? info)
   - pymdownx.superfences:     # 탭 안에 코드 블록 넣기, Mermaid 등
