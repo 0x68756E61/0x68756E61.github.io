@@ -4,12 +4,11 @@ date: 2026-02-02
 authors:
   - '0x68756E61'
 categories:
-  - Agent Runtime
+  - openclawd
 tags:
   - openclawd
   - clawdbot
 ---
-
 ![](../../assets/images/openclaw-agent-runtime-hero.png)
 
 > Lead: OpenClaw는 단일 내장 에이전트 런타임을 통해 워크스페이스, 부트스트랩 파일, 스킬 로딩 및 세션 관리를 일관되게 처리합니다. 이 글은 에이전트 런타임의 구성요소와 운영 중요사항을 기술합니다.
