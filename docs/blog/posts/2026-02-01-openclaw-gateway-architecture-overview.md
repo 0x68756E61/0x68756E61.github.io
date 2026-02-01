@@ -1,6 +1,6 @@
 ---
 title: OpenClaw Gateway 아키텍처 완전 안내
-date: 2026-02-02
+date: 2026-02-01
 authors:
   - '0x68756E61'
 categories:
