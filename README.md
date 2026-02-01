@@ -6,7 +6,7 @@ MkDocs Material 테마의 강력한 기능(Admonition, Code Block, Tab 등)을 �
 
 ---
 
-### 📂 파일 생성: `docs/blog/2024-02-01-first-post.md`
+### 📂 파일 생성: `docs/blog/posts/2024-02-01-first-post.md`
 
 아래 내용을 그대로 복사해서 파일로 저장하세요.
 
@@ -15,7 +15,7 @@ MkDocs Material 테마의 강력한 기능(Admonition, Code Block, Tab 등)을 �
 title: MkDocs Material 기능 완벽 가이드
 date: 2024-02-01
 authors:
-  - automation-bot
+  - '0x68756E61'
 categories:
   - Guide
   - MkDocs
@@ -34,30 +34,30 @@ tags:
 
 ## 1. 텍스트 강조 (Admonitions)
 
-가장 많이 사용되는 기능입니다. `note`, `tip`, `warning`, `danger` 등을 사용할 수 있습니다.
+가장 많이 사용되는 기능입니다. `note`, `tip`, `warning`, `danger` 등을 사용할 수 있습니다。
 
 !!! note "참고 사항"
-    이것은 일반적인 노트를 작성할 때 사용합니다.
-    파란색 박스로 렌더링됩니다.
+    이것은 일반적인 노트를 작성할 때 사용합니다。
+    파란색 박스로 렌더링됩니다。
 
 !!! tip "꿀팁"
-    독자에게 팁을 줄 때 사용합니다. 초록색으로 보입니다.
+    독자에게 팁을 줄 때 사용합니다。 초록색으로 보입니다。
 
 !!! warning "주의"
-    경고 메시지입니다. 주황색으로 강조됩니다.
+    경고 메시지입니다。 주황색으로 강조됩니다。
 
 !!! danger "위험 (중요)"
-    매우 중요한 내용이나 에러 관련 내용은 이걸 쓰세요.
+    매우 중요한 내용이나 에러 관련 내용은 이걸 쓰세요。
 
 ??? info "눌러서 펼쳐보기 (Collapsible)"
-    내용이 너무 길 때 이렇게 접어둘 수 있습니다.
-    클릭하면 내용이 나옵니다.
+    내용이 너무 길 때 이렇게 접어둘 수 있습니다。
+    클릭하면 내용이 나옵니다。
 
 ---
 
 ## 2. 코드 블록 (Code Blocks)
 
-코드 하이라이팅, 줄 번호, 파일명 표시, 복사 버튼이 자동 지원됩니다.
+코드 하이라이팅、 줄 번호、 파일명 표시、 복사 버튼이 자동 지원됩니다。
 
 ```python title="automation.py" linenums="1"
 import os
@@ -76,7 +76,7 @@ def hello_world():
 
 ## 3. 탭 기능 (Content Tabs)
 
-운영체제별 설치법이나 여러 언어 예제를 보여줄 때 유용합니다.
+운영체제별 설치법이나 여러 언어 예제를 보여줄 때 유용합니다。
 
 === "Python"
 `bash pip install mkdocs-material `
@@ -116,16 +116,16 @@ def hello_world():
 
 ## 6. 특수 서식
 
-* **형광펜 효과**: 텍스트 중 ==중요한 부분==을 하이라이트 합니다.
+* **형광펜 효과**: 텍스트 중 ==중요한 부분==을 하이라이트 합니다。
 * **키보드 키**: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>
 * **각주**: 문장 끝에 설명을 답니다.[^1]
-* **아이콘**: 이모지 외에도 아이콘을 쓸 수 있습니다. :smile: :heart:
+* **아이콘**: 이모지 외에도 아이콘을 쓸 수 있습니다。 :smile: :heart:
 
 ---
 
 ## 7. 다이어그램 (Mermaid)
 
-순서도나 시퀀스 다이어그램을 코드로 그립니다.
+순서도나 시퀀스 다이어그램을 코드로 그립니다。
 
 ```mermaid
 graph TD;
@@ -143,9 +143,9 @@ graph TD;
 
 ### ⚠️ 필수 설정 (`mkdocs.yml`)
 
-위의 샘플 코드가 예쁘게 렌더링되려면, **`mkdocs.yml` 파일에 확장 기능(Extensions) 설정이 반드시 되어 있어야 합니다.**
+위의 샘플 코드가 예쁘게 렌더링되려면、 **`mkdocs.yml` 파일에 확장 기능(Extensions) 설정이 반드시 되어 있어야 합니다。**
 
-기존 `mkdocs.yml` 내용을 아래 내용으로 업데이트(또는 추가) 해주세요.
+기존 `mkdocs.yml` 내용을 아래 내용으로 업데이트(또는 추가) 해주세요。
 
 ```yaml
 site_name: 나의 AI 블로그
@@ -159,7 +159,7 @@ theme:
   palette: 
     scheme: default           # 다크모드 설정 가능
 
-# 🔥 아래 설정이 있어야 샘플 코드가 정상 작동합니다.
+# 🔥 아래 설정이 있어야 샘플 코드가 정상 작동합니다。
 markdown_extensions:
   - admonition                # 박스 강조 기능 (!!! note)
   - pymdownx.details          # 접기/펼치기 (??? info)
@@ -192,9 +192,21 @@ plugins:
 
 ### ✅ 적용 방법
 
-1. **`mkdocs.yml` 수정:** 위 설정을 복사해서 붙여넣습니다.
-2. **`docs/blog/2024-02-01-first-post.md` 생성:** 샘플 마크다운을 저장합니다.
-3. **확인:** `mkdocs serve` 명령어로 로컬에서 열어보시면, 박스, 탭, 차트 등이 화려하게 렌더링 된 것을 보실 수 있습니다.
+1. **`mkdocs.yml` 수정:** 위 설정을 복사해서 붙여넣습니다。
+2. **`docs/blog/2024-02-01-first-post.md` 생성:** 샘플 마크다운을 저장합니다。
+3. **확인:** `mkdocs serve` 명령어로 로컬에서 열어보시면、 박스、 탭、 차트 등이 화려하게 렌더링 된 것을 보실 수 있습니다。
 
-이제 LLM에게 **"이 샘플 파일의 형식을 참고해서 새 글을 써줘"**라고 하면, 아주 퀄리티 높은 포스팅을 만들어낼 것입니다!
+---
 
+## Posting policy (updated)
+
+- From now on, I will only publish new posts to the blog when you explicitly ask me to. I will not publish or push anything unless you request it.
+- Workflow: When you request a post, provide the topic, title, body, and any metadata (authors, categories, tags). I will format the post according to the examples above and place the file in `jekyll_source/_posts/` (or `docs/blog/` if using MkDocs). I will then build the site locally and push the generated static site to the `main` branch so it is served.
+- Local path: `/home/ubuntu/sites/0x68756E61.github.io` is the working directory for all blog operations. I will perform builds and commits from there.
+- If you want automated posting or scheduling later, tell me and I'll propose a secure workflow.
+- The blog's featured image is created using nano-banana-pro skills and attached as an image link to the first line of the post. Refer to the post content to create and apply the most appropriate image creation prompt.
+- Blog authors must always be specified as '0x68756E61' to successfully build with MkDocs.
+
+---
+
+Now LLM에게 **"이 샘플 파일의 형식을 참고해서 새 글을 써줘"** 라고 하면、 저는 대표님이 승인하실 때까지 실제 게시를 하지는 않겠습니다。 If you tell me to publish, I'll do the build and push as described.
