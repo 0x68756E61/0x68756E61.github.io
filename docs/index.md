@@ -47,5 +47,5 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
 
 ## 🚀 최신 글 (Featured)
 
-* **[OpenClaw Agent Runtime (에이전트 런타임)](blog/posts/2026-02-02-agent-runtime.md)** - 런타임 구성요소와 운영 중요사항
-* **[OpenClaw Gateway 아키텍처 완전 안내](blog/posts/2026-02-01-gateway-architecture.md)** - 게이트웨이 구성 요소 및 프로토콜 정리
+* **[OpenClaw Agent Runtime (에이전트 런타임)](blog/posts/2026-02-02-openclaw-agent-runtime.md)** - 런타임 구성요소와 운영 중요사항
+* **[OpenClaw Gateway 아키텍처 완전 안내](blog/posts/2026-02-01-openclaw-gateway-architecture-overview.md)** - 게이트웨이 구성 요소 및 프로토콜 정리
