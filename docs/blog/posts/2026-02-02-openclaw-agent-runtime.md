@@ -12,52 +12,51 @@ tags:
 
 ![](../../assets/images/openclaw-agent-runtime-hero.png)
 
+> Lead: OpenClaw는 단일 내장 에이전트 런타임을 통해 워크스페이스, 부트스트랩 파일, 스킬 로딩 및 세션 관리를 일관되게 처리합니다. 이 글은 에이전트 런타임의 구성요소와 운영 중요사항을 기술합니다.
 
-Last updated: 2026-01-22
+---
 
-에이전트 런타임(Agent Runtime)
+## 에이전트 런타임 개요
 
-OpenClaw는 pi-mono에서 파생된 단일 내장 에이전트 런타임을 실행합니다.
+OpenClaw는 pi-mono에서 파생된 단일 내장 에이전트 런타임을 실행합니다. 에이전트는 단일 워크스페이스(agents.defaults.workspace)를 작업 디렉터리로 사용하며, 필요한 부트스트랩 파일들이 해당 워크스페이스에 존재해야 합니다.
 
-워크스페이스(필수)
-OpenClaw는 단일 에이전트 워크스페이스 디렉터리(agents.defaults.workspace)를 에이전트의 작업 디렉터리(cwd)로 사용합니다. 도구와 컨텍스트는 이 디렉터리를 기준으로 동작합니다. 누락된 경우 `openclaw setup`을 사용해 `~/.openclaw/openclaw.json`을 생성하고 워크스페이스 파일을 초기화하는 것을 권장합니다.
+## 워크스페이스와 부트스트랩 파일
 
-부트스트랩 파일(주입되는 파일)
-agents.defaults.workspace 내부에서 OpenClaw는 다음의 사용자 편집 가능한 파일들을 기대합니다:
+워크스페이스에는 운영 및 페르소나를 정의하는 일련의 파일이 필요합니다:
 
-- AGENTS.md — 운영 지침 및 “메모리”
-- SOUL.md — 페르소나, 경계, 톤
-- TOOLS.md — 사용자가 유지보수하는 도구 노트(예: imsg, sag, 규약)
-- BOOTSTRAP.md — 처음 실행 시 의식(완료 후 삭제)
-- IDENTITY.md — 에이전트 이름/분위기/이모지
-- USER.md — 사용자 프로필 및 선호 호칭
+- `AGENTS.md` — 운영 지침 및 메모리
+- `SOUL.md` — 페르소나(톤/경계)
+- `TOOLS.md` — 도구 노트와 로컬 규약
+- `BOOTSTRAP.md` — 최초 실행 의식(완료 시 삭제)
+- `IDENTITY.md` — 에이전트 식별 정보
+- `USER.md` — 사용자 프로필 및 선호사항
 
-새 세션의 첫 턴에서 OpenClaw는 이 파일들의 내용을 에이전트 컨텍스트에 직접 주입합니다. 빈 파일은 건너뛰며, 큰 파일은 프롬프트를 가볍게 유지하기 위해 잘라내기/요약 표식이 붙습니다. 파일이 없으면 OpenClaw는 단일 “missing file” 마커 라인을 주입하며 `openclaw setup`으로 기본 템플릿을 생성할 수 있습니다. BOOTSTRAP.md는 완전히 새로운 워크스페이스에만 생성됩니다.
+새 세션의 첫 턴에서 OpenClaw는 이 파일들의 내용을 에이전트 컨텍스트에 주입합니다. 파일이 없거나 비어 있으면 안전한 기본 마커/요약이 대신 주입됩니다.
 
-내장 도구
-핵심 도구(read/exec/edit/write 및 관련 시스템 도구)는 항상 사용 가능하며 도구 정책의 적용을 받습니다. `apply_patch`는 선택적이며 `tools.exec.applyPatch`로 제어됩니다. TOOLS.md는 어떤 도구가 존재하는지를 제어하지 않으며, 도구 사용 방식에 대한 가이드입니다.
+## 내장 도구와 스킬 로딩
 
-스킬 로딩
-OpenClaw는 세 곳에서 스킬을 로드합니다(워크스페이스가 이름 충돌 시 우선):
-- Bundled(설치에 포함)
-- Managed/local: ~/.openclaw/skills
-- Workspace: <workspace>/skills
+핵심 도구(read/exec/edit/write)는 도구 정책의 제약 하에 항상 사용 가능합니다. 스킬은 세 위치에서 로드됩니다: 번들, 사용자 관리(~/.openclaw/skills), 워크스페이스 내 skills 폴더. 스킬은 구성에 따라 게이트될 수 있습니다.
 
-스킬은 구성 또는 환경변수로 게이팅될 수 있습니다.
+## 세션 저장 및 스트리밍 제어
 
-세션 저장
-세션 전사(transcript)는 JSONL 형식으로 저장됩니다:
-`~/.openclaw/agents/<agentId>/sessions/<SessionId>.jsonl`
+세션 전사는 JSONL로 저장됩니다(`~/.openclaw/agents/<agentId>/sessions/<SessionId>.jsonl`).
 
-스트리밍 중 제어
-큐 모드가 `steer`일 때, 들어오는 메시지는 현재 실행 중인 런에 주입됩니다. 큐는 각 도구 호출 후 확인되며, 대기중인 메시지가 있으면 현재 어시스턴트 메시지의 남은 도구 호출을 건너뜁니다(“Skipped due to queued user message.” 에러 도구 결과). `followup` 또는 `collect` 모드에서는 들어오는 메시지를 현재 턴이 끝날 때까지 보관한 뒤 새 에이전트 턴으로 주입합니다.
+큐 모드(steer, followup, collect)에 따라 들어오는 메시지의 주입 시점과 도구 호출의 처리 방식이 달라집니다. 블록 스트리밍 설정을 통해 응답 청크 크기와 경계를 조정할 수 있습니다.
 
-블록 스트리밍
-블록 스트리밍은 완성된 어시스턴트 블록을 즉시 전송합니다(기본값: off). 경계와 청크 크기, 합치기 동작은 agents.defaults.* 설정으로 조정할 수 있습니다. 자세한 설정은 문서를 참조하세요.
+## 모델 참조 규칙
 
-모델 참조
-에이전트 설정의 모델 참조(예: agents.defaults.model)는 첫 번째 '/'를 기준으로 분리합니다. provider/model 형식을 권장하며, OpenRouter 스타일의 경우 provider 접두사를 포함하세요(e.g., openrouter/moonshotai/kimi-k2). 접두사를 생략하면 기본 프로바이더의 별칭으로 취급됩니다(모델 ID에 '/'가 없을 때만).
+모델 참조는 provider/model 형식을 권장합니다. OpenRouter 스타일 ID를 사용할 때는 provider 접두사를 포함하세요.
 
-기본 구성(최소 설정)
-- agents.defaults.workspace 설정
-- channels.whatsapp.allowFrom 설정(강력 권장)
+## 운영 체크리스트
+
+- `agents.defaults.workspace` 설정 확인
+- `channels.whatsapp.allowFrom` 설정 권장
+- 부트스트랩 파일(AGENTS.md, SOUL.md 등) 준비
+- 로그 및 세션 저장소 모니터링
+
+---
+
+### 참고 문서
+- 원문: Agent Runtime — OpenClaw docs
+
+(이 글은 OpenClaw 문서의 'Agent Runtime' 항목을 한글로 번역·정리한 것입니다.)
