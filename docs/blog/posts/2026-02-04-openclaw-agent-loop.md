@@ -10,8 +10,15 @@ tags:
   - clawdbot
 ---
 
+![](../../assets/images/openclaw-agent-loop-hero.png)
+
+> summary:
+
+<!-- more -->
+
+# 2026 02 04 Openclaw Agent Loop
+
 summary: 
-> ![](../../assets/images/openclaw-agent-loop-hero.png)
 
 
 에이전트 루프(Agent Loop)
@@ -23,11 +30,11 @@ summary:
 <!-- more -->
 
 
----
+
+
 
 # OpenClaw Agent Loop (에이전트 루프)
 
-![](../../assets/images/openclaw-agent-loop-hero.png)
 
 
 에이전트 루프(Agent Loop)
