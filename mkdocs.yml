@@ -41,3 +41,8 @@ plugins:
   - search
   - blog:                     # 블로그 기능 활성화
       post_dir: blog/posts
+      archive: true          # 날짜별 모아보기 (2024년, 2월...)
+      categories: true       # 카테고리별 모아보기
+      # 아래 옵션들은 탐색 경험을 크게 향상시킵니다.
+      pagination: true       # 페이지 번호 매기기 (1, 2, 3...)
+      pagination_per_page: 5 # 한 페이지에 글 5개만 노출
