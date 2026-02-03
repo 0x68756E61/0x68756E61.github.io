@@ -9,15 +9,7 @@ tags:
   - openclawd
   - agent
 ---
-
 ![](../../assets/images/openclaw-multi-agent-routing-hero.png)
-
-> 목표: 여러 개의 독립된 에이전트(각각 별도의 워크스페이스, agentDir, 세션)를 한 Gateway에서 운영하고, 채널 계정을 다수(예: 두 개의 WhatsApp)...
-
-<!-- more -->
-
----
-
 # OpenClaw Multi-Agent Routing (멀티-에이전트 라우팅)
 
 목표: 여러 개의 독립된 에이전트(각각 별도의 워크스페이스, agentDir, 세션)를 한 Gateway에서 운영하고, 채널 계정을 다수(예: 두 개의 WhatsApp)...
