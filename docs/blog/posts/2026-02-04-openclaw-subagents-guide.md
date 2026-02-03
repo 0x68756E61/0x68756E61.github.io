@@ -1,6 +1,6 @@
 ---
 title: OpenClaw Subagents 가이드 - sessions_spawn과 멀티 에이전트 설정
-date: 2025-02-12
+date: 2026-02-04
 authors:
   - '0x68756E61'
 categories:
