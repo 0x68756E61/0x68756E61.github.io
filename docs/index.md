@@ -21,7 +21,7 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
 
 <div class="grid cards" markdown>
 
--   :material-robot: **OpenClawd**
+-   :material-robot: **OpenClaw**
     ---
     OpenClaw 를 이용한 자동화를 다룹니다.
     
