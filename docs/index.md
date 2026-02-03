@@ -25,7 +25,7 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
     ---
     OpenClaw 를 이용한 자동화를 다룹니다.
     
-    [살펴보기](blog/category/openclawd/)
+    [살펴보기](blog/category/openclaw/)
 
 
 -   :material-creation: **Automation**

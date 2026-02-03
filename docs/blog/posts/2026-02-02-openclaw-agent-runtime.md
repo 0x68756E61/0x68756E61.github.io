@@ -4,9 +4,9 @@ date: 2026-02-02
 authors:
   - '0x68756E61'
 categories:
-  - openclawd
+  - openclaw
 tags:
-  - openclawd
+  - openclaw
   - clawdbot
 ---
 
