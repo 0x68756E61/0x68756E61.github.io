@@ -7,7 +7,7 @@ categories:
   - openclawd
 tags:
   - openclawd
-  - clawdbot
+  - agent
 ---
 
 summary: 
