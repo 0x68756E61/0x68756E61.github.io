@@ -9,7 +9,15 @@ tags:
   - openclawd
   - clawdbot
 ---
+
 ![](../../assets/images/openclaw-agent-loop-hero.png)
+
+> Lead: 에이전트 루프는 입력에서 최종 응답까지의 전체 실행 경로로, 컨텍스트 조립·모델 추론·도구 실행·스트리밍 응답·영속화를 포함합니다.
+
+<!-- more -->
+
+---
+# 2026 02 02 Openclaw Agent Loop
 
 > Lead: 에이전트 루프는 입력에서 최종 응답까지의 전체 실행 경로로, 컨텍스트 조립·모델 추론·도구 실행·스트리밍 응답·영속화를 포함합니다.
 

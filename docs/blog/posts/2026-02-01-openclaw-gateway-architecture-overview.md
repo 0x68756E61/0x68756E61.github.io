@@ -9,7 +9,15 @@ tags:
   - openclawd
   - clawdbot
 ---
+
 ![](../../assets/images/openclaw-gateway-architecture-overview-hero.png)
+
+> 단락 요약(Lead): OpenClaw의 Gateway는 모든 메시징 채널을 통합·관리하는 중앙 컴포넌트입니다. 이 글은 Gateway의 구성 요소, 프로토콜, 페어링/보안, 운영 관행을 실무 관점에서 정리합니다.
+
+<!-- more -->
+
+---
+# 2026 02 01 Openclaw Gateway Architecture Overview
 
 > 단락 요약(Lead): OpenClaw의 Gateway는 모든 메시징 채널을 통합·관리하는 중앙 컴포넌트입니다. 이 글은 Gateway의 구성 요소, 프로토콜, 페어링/보안, 운영 관행을 실무 관점에서 정리합니다.
 
