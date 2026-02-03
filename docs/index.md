@@ -46,4 +46,4 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
 ---
 
 ## 🚀 최신 글 (Featured)
-* **[OpenClaw Multi-Agent Routing (멀티-에이전트 라우팅)](blog/posts/2026-02-03-openclaw-multi-agent-routing.md)** - ![](../../assets/images/openclaw-multi-agent-routing-hero.png)
+* **[OpenClaw Multi-Agent Routing (멀티-에이전트 라우팅)](blog/posts/2026-02-03-openclaw-multi-agent-routing.md)**
