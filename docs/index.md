@@ -47,11 +47,3 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
 
 ## 🚀 최신 글 (Featured)
 * **[OpenClaw Multi-Agent Routing (멀티-에이전트 라우팅)](blog/posts/2026-02-03-openclaw-multi-agent-routing.md)** - ![](../../assets/images/openclaw-multi-agent-routing-hero.png)
-
-
-# 멀티-에이전트 라우팅 (Multi-Agent Routing)
-
-목표: 여러 개의 독립된 에이전트(각각 별도의 워크스페이스, agentDir, 세션)를 한 Gateway에서 운영하고, 채널 계정을 다수(예: 두 개의 WhatsApp)...
-* **[OpenClaw Agent Runtime (에이전트 런타임)](blog/posts/2026-02-02-openclaw-agent-runtime.md)** - 런타임 구성요소와 운영 중요사항
-* **[OpenClaw Gateway 아키텍처 완전 안내](blog/posts/2026-02-01-openclaw-gateway-architecture-overview.md)** - 게이트웨이 구성 요소 및 프로토콜 정리
-
