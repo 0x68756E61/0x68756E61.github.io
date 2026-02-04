@@ -28,6 +28,13 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
     [살펴보기](blog/category/openclaw/)
 
 
+-   :material-database: **Engineering**
+    ---
+    백엔드 아키텍처, 데이터베이스 최적화 등 기술 전반을 다룹니다.
+    
+    [살펴보기](blog/category/engineering/)
+
+
 -   :material-creation: **Automation**
     ---
     AI를 활용한 블로그 자동 운영 및 워크플로우 효율화 팁입니다.
@@ -46,5 +53,6 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
 ---
 
 ## 🚀 최신 글 (Featured)
-* **[OpenClaw Subagents 가이드 - sessions_spawn과 멀티 에이전트 설정](blog/posts/2025-02-12-openclaw-subagents-guide.md)**
+* **[RDB의 한계 돌파: OpenAI의 PostgreSQL 단일 노드 극한 최적화 & 아키텍처 분석](blog/posts/2026-02-04-openai-postgresql-optimization.md)**
+* **[OpenClaw Subagents 가이드 - sessions_spawn과 멀티 에이전트 설정](blog/posts/2026-02-04-openclaw-subagents-guide.md)**
 * **[OpenClaw Multi-Agent Routing (멀티-에이전트 라우팅)](blog/posts/2026-02-03-openclaw-multi-agent-routing.md)**
