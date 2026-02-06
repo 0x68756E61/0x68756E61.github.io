@@ -8,7 +8,7 @@ tags:
   - economy
   - market-analysis
 authors:
-  - 0x68756E61
+  - "0x68756E61"
 ---
 
 ![KOSPI 5000 Analysis](../../../images/posts/2026/02/kospi-5000-analysis.png)
