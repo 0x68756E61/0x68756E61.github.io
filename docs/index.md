@@ -62,5 +62,3 @@ LLM과 함께 성장하는 개발 기록을 공유합니다.
 ## 🚀 최신 글 (Featured)
 * **[[시장 분석] 코스피 5,000 시대, '제2의 3저 호황'인가 '사상누각'인가?](blog/posts/2026/02/kospi-5000-analysis.md)**
 * **[RDB의 한계 돌파: OpenAI의 PostgreSQL 단일 노드 극한 최적화 & 아키텍처 분석](blog/posts/2026-02-04-openai-postgresql-optimization.md)**
-* **[OpenClaw Subagents 가이드 - sessions_spawn과 멀티 에이전트 설정](blog/posts/2026-02-04-openclaw-subagents-guide.md)**
-* **[OpenClaw Multi-Agent Routing (멀티-에이전트 라우팅)](blog/posts/2026-02-03-openclaw-multi-agent-routing.md)**
